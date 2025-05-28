@@ -41,13 +41,13 @@ Designed for seamless integration into existing security infrastructures, such a
 
 ## Introduction
 
-### Background
+#### Background
 The rapid digital transformation has led to a significant increase in cyber threats, particularly at the application layer, where web applications and microservices are prime targets for attackers. Traditional Intrusion Detection Systems (IDS) and Web Application Firewalls (WAFs) primarily rely on rule-based or signature-based mechanisms to detect malicious activities. However, these approaches struggle against modern cyber threats, such as zero-day attacks and sophisticated obfuscation techniques, which bypass conventional security measures.
 
-### Research Motivation
+#### Research Motivation
 The motivation for this research stems from the need for an advanced intrusion detection approach that addresses the limitations of current IDS solutions. The proposed framework integrates multiple detection techniques into a structured, hierarchical architecture, enhancing scalability, accuracy, and adaptability to diverse and evolving cyber threats.
 
-### Key Challenges Addressed
+#### Key Challenges Addressed
 - High false positive rates in traditional IDS
 - Emergence of adversarial attacks
 - Lack of generalization in existing IDS models
@@ -62,10 +62,10 @@ The primary objective of this research is to develop a hierarchical, multi-stage
 
 ## Aim and Objectives
 
-### Aim
+#### Aim
 To design, implement, and evaluate a hierarchical, multistage detection system capable of identifying both known and unknown web application attacks as well as the application component which is vulnerable during the cyber attacks with high accuracy, scalability, and adaptability, thereby enhancing overall application-layer security.
 
-### Objectives
+#### Objectives
 1. To design and develop a hierarchical, multi-stage algorithmic framework
 2. To define measurable security metrics, including classification accuracy, detection precision, computational efficiency, and adaptability
 3. To explore several algorithmic approaches within the hierarchical framework, combining neural networks with ensemble-based machine learning techniques
@@ -74,7 +74,7 @@ To design, implement, and evaluate a hierarchical, multistage detection system c
 
 ## Related works
 
-### Key Research Areas
+#### Key Research Areas
 - **Intrusion Detection Systems (IDS)**: Evolution from signature-based to ML/DL-based approaches
 - **Network-Layer vs. Application-Layer Detection**: Focus on application-layer threats like SQL injection, XSS, and RCE
 - **Machine Learning in Cybersecurity**: SVM, Decision Trees, Random Forests, CNN, LSTM implementations
@@ -83,13 +83,13 @@ To design, implement, and evaluate a hierarchical, multistage detection system c
 
 ## Methodology
 
-### Overview
+#### Overview
 Our hierarchical, multistage approach combines:
 1. **Supervised Classification** for known threats
 2. **Anomaly Detection** for suspicious, potentially unknown attacks
 3. **Root Cause Analysis** for identifying the specific vulnerable application component using log correlation
 
-### Data Collection
+#### Data Collection
 ![Data Collection Flow](./images/data_collection_flow.jpg)
 
 1. **Setup Vulnerable Server Environment**
@@ -107,12 +107,12 @@ Our hierarchical, multistage approach combines:
    - Database logs (MySQL, MongoDB, PostgreSQL)
    - Centralized logging with ELK Stack or Splunk
 
-### Model Development
+#### Model Development
 1. **Supervised Classifier**: Logistic Regression, Random Forest, Gradient Boosting, or Neural Networks
 2. **Anomaly Detector**: One-Class SVM, Isolation Forest, or Autoencoder-based approaches
 3. **Vulnerability Identification Component**: Correlation analysis to identify vulnerable components
 
-### Detection Pipeline
+#### Detection Pipeline
 ![Hybrid Pipeline & Component Identifier](./images/hybrid_pipeline.jpg)
 
 The hierarchical detection pipeline includes:
@@ -124,17 +124,17 @@ The hierarchical detection pipeline includes:
 
 ## Experiment Setup and Implementation
 
-### Environment Setup
+#### Environment Setup
 - Vulnerable applications deployed in controlled environments
 - Docker containers for isolation
 - Custom log collection scripts
 
-### Evaluation Metrics
+#### Evaluation Metrics
 - **Performance Metrics**: Accuracy, Precision, Recall, F1-score, FPR, FNR
 - **Root Cause Accuracy**: Correctness in identifying affected components
 - **Scalability Performance**: Ability to handle large traffic volumes
 
-### Experimental Scenarios
+#### Experimental Scenarios
 1. Known attacks evaluation
 2. Unknown or mutated attacks testing
 3. Unknown normal cases assessment
